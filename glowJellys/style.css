@@ -1,16 +1,69 @@
+/* Kezdetleges Weboldal Specifikációk */
+
 * {
     padding: 0%;
     margin: 0%;
 }
 
+/* Változók */
+
 :root {
     --backgroundColor: white;
     --navBaraBackgroundColor: white;
+    --NavBarButtonsColor: white;
+    --NavBarButtonsFontSize: 30px;
     --titleTextColor: white;
     --paragraphTextColor: white;
 }
-  
+
+/* Body */
 
 body {
     background-color: black;
+    font-family: monospace;
 }
+
+/* Nav-Bar Button Href a Links */
+
+#mainSiteNavBarButtonLink {
+    text-decoration: none;
+}
+
+#livingWorldNavBarButtonLink {
+    text-decoration: none;
+}
+
+#nutritionNavBarButtonLink {
+    text-decoration: none;
+}
+
+#evolutionNavBarButtonLink {
+    text-decoration: none;
+}
+
+/* Nav-Bar Button Href a Links Vége */
+
+
+/* Nav-Bar Buttons */
+
+#mainSiteNavBarButton {
+    font-size: var(--NavBarButtonsFontSize);
+    color: var(--NavBarButtonsColor);
+}
+
+#livingWorldNavBarButton {
+    font-size: var(--NavBarButtonsFontSize);
+    color: var(--NavBarButtonsColor);
+}
+
+#nutritionNavBarButton {
+    font-size: var(--NavBarButtonsFontSize);
+    color: var(--NavBarButtonsColor);
+}
+
+#evolutionNavBarButton {
+    font-size: var(--NavBarButtonsFontSize);
+    color: var(--NavBarButtonsColor);
+}
+
+/* Nav-Bar Buttons Vége */
