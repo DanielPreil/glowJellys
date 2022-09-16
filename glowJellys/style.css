@@ -1,4 +1,4 @@
-/* Kezdetleges Weboldal Specifikációk */
+/* ----- Kezdetleges Weboldal Specifikációk ----- */
 
 * {
     padding: 0%;
@@ -6,11 +6,14 @@
     box-sizing: border-box;
 }
 
-/* Változók */
+/* ----- Kezdetleges Weboldal Specifikációk Vége ----- */
+
+
+/* ----- Változók ----- */
 
 :root {
     --backgroundColor: whitesmoke;
-    --navBaraBackgroundColor: rgb(17, 17, 17);
+    --navBarBackgroundColor: rgb(17, 17, 17);
     --NavBarButtonsColor: whitesmoke;
     --NavBarButtonsBackgroundColor: rgb(95, 95, 95);
     --NavBarButtonsFontSize: 28px;
@@ -24,10 +27,30 @@
     --NavBarButtonLinkPadding: 1.5%;
     --NavBarButtonLinkHoverBorder: 2px solid whitesmoke;
     --NavBarButtonLinkHoverBorderRadius: 10px;
-    
+    --NavBarButtonLinkHoverGlowingEffectTextShadow:
+                                                   0 0 7px rgb(132, 0, 255),
+                                                   0 0 10px rgb(132, 0, 255),
+                                                   0 0 21px rgb(132, 0, 255),
+                                                   0 0 42px rgb(132, 0, 255),
+                                                   0 0 82px rgb(132, 0, 255),
+                                                   0 0 92px rgb(132, 0, 255),
+                                                   0 0 102px rgb(132, 0, 255),
+                                                   0 0 151px rgb(132, 0, 255);
+    --NavBarShortCutIconLinkHoverGlowingEffectBoxShadow:
+                                                   0 0 7px rgb(132, 0, 255),
+                                                   0 0 10px rgb(132, 0, 255),
+                                                   0 0 21px rgb(132, 0, 255),
+                                                   0 0 42px rgb(132, 0, 255),
+                                                   0 0 82px rgb(132, 0, 255),
+                                                   0 0 92px rgb(132, 0, 255),
+                                                   0 0 102px rgb(132, 0, 255),
+                                                   0 0 151px rgb(132, 0, 255);
 }
 
-/* html, Body */
+/* ----- Változók Vége ----- */
+
+
+/* ----- html, Body ----- */
 
 html, body {
 
@@ -39,13 +62,24 @@ html, body {
     font-family: monospace;
 }
 
+/* ----- html, Body ----- Vége */
+
+
+/* ----- Nav-Bar, jellyFishLogo, navBarButtons ----- */
+
 #NavBar{
     display: flex;
     text-align: center;
     align-items: center;
     padding-left: 1%;
     padding-top: 0.5%;
-    background-color: var(--navBaraBackgroundColor);
+    background-color: var(--navBarBackgroundColor);
+}
+
+#jellyFishLogo {
+    border: 3px solid var(--navBarBackgroundColor);
+    padding: 0.01%;
+    transition: 0.2s;
 }
 
 #navBarButtons {
@@ -53,7 +87,10 @@ html, body {
     margin-left: var(--navBarButtonsMarginLeft);
 }
 
-/* Nav-Bar Button Href a Links */
+/* ----- Nav-Bar, navBarButtons Vége ----- */
+
+
+/* ----- Nav-Bar Button Href a Links ----- */
 
 #mainSiteNavBarButtonLink {
     text-decoration: var(--NavBarButtonLinkDecorations);
@@ -88,35 +125,47 @@ html, body {
     padding: var(--NavBarButtonLinkPadding);
 }
 
-/* Nav-Bar Button Href a Links Vége */
+/* ----- Nav-Bar Button Href a Links Vége ----- */
 
 
-/* Nav-Bar Button Href a Links:Hover */
+/* ----- jellyFishLogo, Nav-Bar Button Href a Links:Hover ----- */
+
+#jellyFishLogo:hover {
+    box-shadow: var(--NavBarButtonLinkHoverGlowingEffectTextShadow);
+    background-color: rgb(132, 0, 255);
+    border: 3px solid rgb(132, 0, 255);
+    padding: 0.01%;
+    border-radius: 10px;
+}
 
 #mainSiteNavBarButtonLink:hover {
     border: var(--NavBarButtonLinkHoverBorder);
     border-radius: var(--NavBarButtonLinkHoverBorderRadius);
+    text-shadow: var(--NavBarButtonLinkHoverGlowingEffectTextShadow)
 }
 
 #livingWorldNavBarButtonLink:hover {
     border: var(--NavBarButtonLinkHoverBorder);
     border-radius: var(--NavBarButtonLinkHoverBorderRadius);
+    text-shadow: var(--NavBarButtonLinkHoverGlowingEffectTextShadow)
 }
 
 #nutritionNavBarButtonLink:hover {
     border: var(--NavBarButtonLinkHoverBorder);
     border-radius: var(--NavBarButtonLinkHoverBorderRadius);
+    text-shadow: var(--NavBarButtonLinkHoverGlowingEffectTextShadow)
 }
 
 #evolutionNavBarButtonLink:hover {
     border: var(--NavBarButtonLinkHoverBorder);
     border-radius: var(--NavBarButtonLinkHoverBorderRadius);
+    text-shadow: var(--NavBarButtonLinkHoverGlowingEffectTextShadow)
 }
 
-/* Nav-Bar Button Href a Links:Hover Vége */
+/* ----- jellyFishLogo, Nav-Bar Button Href a Links:Hover Vége ----- */
 
 
-/* Nav-Bar Buttons */
+/* ----- Nav-Bar Buttons ----- */
 
 #mainSiteNavBarButton {
     font-size: var(--NavBarButtonsFontSize);
@@ -138,4 +187,4 @@ html, body {
     color: var(--NavBarButtonsColor);
 }
 
-/* Nav-Bar Buttons Vége */
+/* ----- Nav-Bar Buttons Vége ----- */
