@@ -49,7 +49,6 @@
 
 /* ----- Változók Vége ----- */
 
-
 /* ----- html, Body ----- */
 
 html, body {
@@ -62,7 +61,21 @@ html, body {
     font-family: monospace;
 }
 
-/* ----- html, Body ----- Vége */
+/* ----- html, Body Vége ----- */
+
+
+/* ----- backgroundJellyFishVideo ----- */
+
+#backgroundJellyFishVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+/* ----- backgroundJellyFishVideo Vége ----- */
 
 
 /* ----- Nav-Bar, jellyFishLogo, navBarButtons ----- */
@@ -74,12 +87,14 @@ html, body {
     padding-left: 1%;
     padding-top: 0.5%;
     background-color: var(--navBarBackgroundColor);
+    border-bottom: 3px solid rgb(132, 0, 255);
 }
 
 #jellyFishLogo {
     border: 3px solid var(--navBarBackgroundColor);
     padding: 0.01%;
     transition: 0.2s;
+    margin-bottom: 0.3%;
 }
 
 #navBarButtons {
