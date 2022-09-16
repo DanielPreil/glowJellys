@@ -1,0 +1,16 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+:root {
+    --backgroundColor: white;
+    --navBaraBackgroundColor: white;
+    --titleTextColor: white;
+    --paragraphTextColor: white;
+}
+  
+
+body {
+    background-color: black;
+}
