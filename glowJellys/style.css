@@ -3,45 +3,117 @@
 * {
     padding: 0%;
     margin: 0%;
+    box-sizing: border-box;
 }
 
 /* Változók */
 
 :root {
-    --backgroundColor: white;
-    --navBaraBackgroundColor: white;
-    --NavBarButtonsColor: white;
-    --NavBarButtonsFontSize: 30px;
-    --titleTextColor: white;
-    --paragraphTextColor: white;
+    --backgroundColor: whitesmoke;
+    --navBaraBackgroundColor: rgb(17, 17, 17);
+    --NavBarButtonsColor: whitesmoke;
+    --NavBarButtonsBackgroundColor: rgb(95, 95, 95);
+    --NavBarButtonsFontSize: 28px;
+    --titleTextColor: whitesmoke;
+    --paragraphTextColor: whitesmoke;
+    --navBarButtonsMarginLeft: 50%;
+    --NavBarButtonLinkDecorations: none;
+    --NavBarButtonLinkMarginLeft: 10%;
+    --NavBarButtonLinkBorder: 2px solid rgb(53, 53, 53);
+    --NavBarButtonLinkTransition: 0.2s;
+    --NavBarButtonLinkPadding: 1.5%;
+    --NavBarButtonLinkHoverBorder: 2px solid whitesmoke;
+    --NavBarButtonLinkHoverBorderRadius: 10px;
+    
 }
 
-/* Body */
+/* html, Body */
 
-body {
+html, body {
+
+    /* html */
+    overflow-x: hidden;
+    max-width: 100%;
+    /* Body */
     background-color: black;
     font-family: monospace;
+}
+
+#NavBar{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding-left: 1%;
+    padding-top: 0.5%;
+    background-color: var(--navBaraBackgroundColor);
+}
+
+#navBarButtons {
+    display: flex;
+    margin-left: var(--navBarButtonsMarginLeft);
 }
 
 /* Nav-Bar Button Href a Links */
 
 #mainSiteNavBarButtonLink {
-    text-decoration: none;
+    text-decoration: var(--NavBarButtonLinkDecorations);
+    margin-left: var(--NavBarButtonLinkMarginLeft);
+    border: var(--NavBarButtonLinkBorder);
+    transition: var(--NavBarButtonLinkTransition);
+    padding: var(--NavBarButtonLinkPadding);
 }
 
 #livingWorldNavBarButtonLink {
-    text-decoration: none;
+    text-decoration: var(--NavBarButtonLinkDecorations);
+    margin-left: var(--NavBarButtonLinkMarginLeft);
+    border: var(--NavBarButtonLinkBorder);
+    transition: var(--NavBarButtonLinkTransition);
+    padding: var(--NavBarButtonLinkPadding);
 }
 
 #nutritionNavBarButtonLink {
-    text-decoration: none;
+    text-decoration: var(--NavBarButtonLinkDecorations);
+    margin-left: var(--NavBarButtonLinkMarginLeft);
+    border: var(--NavBarButtonLinkBorder);
+    transition: var(--NavBarButtonLinkTransition);
+    padding: var(--NavBarButtonLinkPadding);
+
 }
 
 #evolutionNavBarButtonLink {
-    text-decoration: none;
+    text-decoration: var(--NavBarButtonLinkDecorations);
+    margin-left: var(--NavBarButtonLinkMarginLeft);
+    border: var(--NavBarButtonLinkBorder);
+    transition: var(--NavBarButtonLinkTransition);
+    padding: var(--NavBarButtonLinkPadding);
 }
 
 /* Nav-Bar Button Href a Links Vége */
+
+
+/* Nav-Bar Button Href a Links:Hover */
+
+#mainSiteNavBarButtonLink:hover {
+    border: var(--NavBarButtonLinkHoverBorder);
+    border-radius: var(--NavBarButtonLinkHoverBorderRadius);
+}
+
+#livingWorldNavBarButtonLink:hover {
+    border: var(--NavBarButtonLinkHoverBorder);
+    border-radius: var(--NavBarButtonLinkHoverBorderRadius);
+}
+
+#nutritionNavBarButtonLink:hover {
+    border: var(--NavBarButtonLinkHoverBorder);
+    border-radius: var(--NavBarButtonLinkHoverBorderRadius);
+}
+
+#evolutionNavBarButtonLink:hover {
+    border: var(--NavBarButtonLinkHoverBorder);
+    border-radius: var(--NavBarButtonLinkHoverBorderRadius);
+}
+
+/* Nav-Bar Button Href a Links:Hover Vége */
 
 
 /* Nav-Bar Buttons */
