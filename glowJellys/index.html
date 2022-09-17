@@ -18,7 +18,7 @@
 
     <body>
 
-        <video autoplay loop id="backgroundJellyFishVideo">
+        <video autoplay muted loop id="backgroundJellyFishVideo">
             <source src="\backgroundVideo\Backgroundjellyfishvideo.m4v" type="video/mp4">
         </video>
 
@@ -32,10 +32,10 @@
 
                     <div id="navBarButtons">
 
-                        <a id="mainSiteNavBarButtonLink" href="index.html">Főoldal</a>
-                        <a id="livingWorldNavBarButtonLink" href="index.html">Élővilág</a>
-                        <a id="nutritionNavBarButtonLink" href="index.html">Táplálkozás</a>
-                        <a id="evolutionNavBarButtonLink" href="index.html">Fejlődés</a>
+                        <button onclick="topFunction1()" id="mainSiteNavBarButton">Főoldal</button>
+                        <button onclick="topFunction2()" id="bodyStructureNavBarButton" href="#bodyStructure">Testfelépítés</button>
+                        <button onclick="topFunction3()" id="nutritionNavBarButton" href="#nutrition">Táplálkozás</button>
+                        <button onclick="topFunction4()" id="evolutionNavBarButton" href="#evolution">Fejlődés</button>
 
                     </div>
 
@@ -47,7 +47,29 @@
 
                 <div id="Content">
 
-                    <!-- <h1>Content</h1> -->
+                    <div id="bodyStructure">
+
+                        <h1 id="titleOfBodyStructure">Testfelépítés</h1>
+
+                        <p id="paragraphOfBodyStructure">Sejtjeik valódi szöveteket alkotnak. Testszerveződésük, 2 sejtréteg (ekto- és endoderma), több mint 97%-ban vizet tartalmaznak. A sejtrétegek között mezogloea található. Ez sok mukopoliszacharidot tartalmaz, ezért kocsonyás, vékony, sejtes elemekben szegény. Egyszerű cső alakú manubriummal rendelkeznek. A hidromedúzákra jellemző, hogy az ernyő peremén egy fátyol (velum craspedon) húzódik körbe, ezeket fátyolos medúzáknak is nevezik (craspedot medúza). Az ernyő peremén egységes tapogatókkal rendelkeznek. Kültakarójuk egyrétegű, hengerhámsejtek alkotják.</p>
+
+                    </div>
+
+                    <div id="nutrition">
+
+                        <h1 id="titleOfNutrition">Táplálkozás</h1>
+
+                        <p id="paragraphOfNutrition">Testükön egyetlen szájnyílás van (űrbél). A szájnyílás peremén tapogatók helyezkednek el. A kisebbek planktonokkal, a nagyobb fajok kis rákokkal táplálkoznak úgy, hogy karjaikkal vizet áramoltatnak szájnyílásuk felé, beszippantják és kiszűrik a táplálékot. Az emésztetlen salakanyag aztán szintén ezen a nyíláson át távozik. Ragadozókat és planktonevőket különítünk el. Egyes fajok aktív vadászok, a csalánsejteket tartalmazó tapogatókkal megmérgezett áldozataik akár halak is lehetnek. Ezeket is egészben juttatják űrbelükbe, majd megemésztik.</p>
+
+                    </div>
+
+                    <div id="evolution">
+
+                        <h1 id="titleOfEvolution">Fejlődés</h1>
+
+                        <p id="paragraphOfEvolution">A medúzák az állatvilág legegyszerűbb képviselői közé tartoznak. A kétpolipos vagy édesvízi medúza (Craspedacusta sowebyi) 2 életalakja a helyhez kötött polip és szabadon mozgó medúza nemzedékváltakozással áll egymással kapcsolatban. A medúzák bimbózás útján válnak le a hidrapolipokról. A medúza megtermékenyített petéjéből polipalak fejlődik ki. Az első nemzedék 2 milliméteres nagyságú, egyszerű testfelépítésű, tapogató nélküli polip. A második nemzedéket képviselő medúzák azonban idővel 2 centiméteresre is megnőnek és tapogatói száma a harangszerű ernyők mentén 200–400 is lehet.</p>
+
+                    </div>
 
                 </div>
 
@@ -64,6 +86,8 @@
             </div>
 
         </div>
+
+        <script src="script.js"></script>
 
     </body>
 

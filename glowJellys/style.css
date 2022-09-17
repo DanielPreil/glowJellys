@@ -15,21 +15,21 @@
     --backgroundColor: whitesmoke;
     --navBarBackgroundColor: rgb(17, 17, 17);
     --NavBarButtonsColor: whitesmoke;
+    --NavBarButtonsBackgroundColor: rgb(17, 17, 17);
     --NavBarButtonsHoverColor: black;
-    --NavBarButtonsBackgroundColor: rgb(95, 95, 95);
     --NavBarButtonsFontSize: 28px;
     --titleTextColor: whitesmoke;
     --paragraphTextColor: whitesmoke;
-    --navBarButtonsMarginLeft: 50%;
-    --NavBarButtonLinkDecorations: none;
-    --NavBarButtonLinkMarginLeft: 10%;
-    --NavBarButtonLinkBorder: 2px solid rgb(53, 53, 53);
-    --NavBarButtonLinkTransition: 0.2s;
-    --NavBarButtonLinkPadding: 1.5%;
-    --NavBarButtonLinkHoverBorder: 2px solid rgb(0, 217, 255);
-    --NavBarButtonLinkHoverBorderRadius: 10px;
-    --NavBarButtonLinkHoverBackgroundColor: rgb(0, 217, 255);
-    --NavBarButtonLinkHoverGlowingEffectTextShadow:
+    --navBarButtonsMarginLeft: 52%;
+    --NavBarButtonDecorations: none;
+    --NavBarButtonMarginLeft: 10%;
+    --NavBarButtonBorder: 2px solid rgb(53, 53, 53);
+    --NavBarButtonTransition: 0.2s;
+    --NavBarButtonPadding: 1.5%;
+    --NavBarButtonHoverBorder: 2px solid rgb(0, 217, 255);
+    --NavBarButtonHoverBorderRadius: 10px;
+    --NavBarButtonHoverBackgroundColor: rgb(0, 217, 255);
+    --NavBarButtonHoverGlowingEffectTextShadow:
                                                    0 0 7px rgb(0, 217, 255),
                                                    0 0 10px rgb(0, 217, 255),
                                                    0 0 21px rgb(0, 217, 255),
@@ -47,6 +47,15 @@
                                                    0 0 92px rgb(14, 103, 155),
                                                    0 0 102px rgb(14, 103, 155),
                                                    0 0 151px rgb(14, 103, 155);
+    --contentElementsBackgroundColor: rgb(17, 17, 17);
+    --ContentContainerTextColor: whitesmoke;
+    --ContentContainerTitleFontSize: 30px;
+    --ContentContainerParagraphsFontSize: 22px;
+    --ContentContainerElementsBackgroundColor: rgba(0, 0, 0, 0.5);
+    --ContentContainerParagraphsMarginTop: 1%;
+    --ContentContainerParagraphsPadding: 3%;
+    --ContentContainerParagraphsBorderColors: whitesmoke;
+    --ContentContainerTitlesBorderColors: whitesmoke;
 }
 
 /* ----- Változók Vége ----- */
@@ -58,6 +67,7 @@ html, body {
     /* html */
     overflow-x: hidden;
     max-width: 100%;
+    scroll-behavior: smooth;
     /* Body */
     background-color: black;
     font-family: monospace;
@@ -74,7 +84,7 @@ html, body {
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    z-index: -1;
+    z-index: -2;
 }
 
 /* ----- backgroundJellyFishVideo Vége ----- */
@@ -92,12 +102,13 @@ html, body {
     padding-left: 1%;
     padding-top: 0.5%;
     background-color: var(--navBarBackgroundColor);
-    border-bottom: 3px solid rgb(0, 217, 255);
+    border-bottom: 3px solid rgba(0, 217, 255, 0.459);
+    border-top: 3px solid rgba(0, 217, 255, 0.459);
 }
 
 #jellyFishLogo {
     border: 3px solid var(--navBarBackgroundColor);
-    padding: 0.01%;
+    padding: 0.001%;
     transition: 0.2s;
     margin-bottom: 0.3%;
 }
@@ -110,53 +121,57 @@ html, body {
 /* ----- Nav-Bar, navBarButtons Vége ----- */
 
 
-/* ----- Nav-Bar Button Href a Links ----- */
+/* ----- Nav-Bar Buttons ----- */
 
-#mainSiteNavBarButtonLink {
+#mainSiteNavBarButton {
+    background-color: var(--NavBarButtonsBackgroundColor);
     font-size: var(--NavBarButtonsFontSize);
     color: var(--NavBarButtonsColor);
-    text-decoration: var(--NavBarButtonLinkDecorations);
-    margin-left: var(--NavBarButtonLinkMarginLeft);
-    border: var(--NavBarButtonLinkBorder);
-    transition: var(--NavBarButtonLinkTransition);
-    padding: var(--NavBarButtonLinkPadding);
+    text-decoration: var(--NavBarButtonDecorations);
+    margin-left: var(--NavBarButtonMarginLeft);
+    border: var(--NavBarButtonBorder);
+    transition: var(--NavBarButtonTransition);
+    padding: var(--NavBarButtonPadding);
 }
 
-#livingWorldNavBarButtonLink {
+#bodyStructureNavBarButton {
+    background-color: var(--NavBarButtonsBackgroundColor);
     font-size: var(--NavBarButtonsFontSize);
     color: var(--NavBarButtonsColor);
-    text-decoration: var(--NavBarButtonLinkDecorations);
-    margin-left: var(--NavBarButtonLinkMarginLeft);
-    border: var(--NavBarButtonLinkBorder);
-    transition: var(--NavBarButtonLinkTransition);
-    padding: var(--NavBarButtonLinkPadding);
+    text-decoration: var(--NavBarButtonDecorations);
+    margin-left: var(--NavBarButtonMarginLeft);
+    border: var(--NavBarButtonBorder);
+    transition: var(--NavBarButtonTransition);
+    padding: var(--NavBarButtonPadding);
 }
 
-#nutritionNavBarButtonLink {
+#nutritionNavBarButton {
+    background-color: var(--NavBarButtonsBackgroundColor);
     font-size: var(--NavBarButtonsFontSize);
     color: var(--NavBarButtonsColor);
-    text-decoration: var(--NavBarButtonLinkDecorations);
-    margin-left: var(--NavBarButtonLinkMarginLeft);
-    border: var(--NavBarButtonLinkBorder);
-    transition: var(--NavBarButtonLinkTransition);
-    padding: var(--NavBarButtonLinkPadding);
+    text-decoration: var(--NavBarButtonDecorations);
+    margin-left: var(--NavBarButtonMarginLeft);
+    border: var(--NavBarButtonBorder);
+    transition: var(--NavBarButtonTransition);
+    padding: var(--NavBarButtonPadding);
 
 }
 
-#evolutionNavBarButtonLink {
+#evolutionNavBarButton {
+    background-color: var(--NavBarButtonsBackgroundColor);
     font-size: var(--NavBarButtonsFontSize);
     color: var(--NavBarButtonsColor);
-    text-decoration: var(--NavBarButtonLinkDecorations);
-    margin-left: var(--NavBarButtonLinkMarginLeft);
-    border: var(--NavBarButtonLinkBorder);
-    transition: var(--NavBarButtonLinkTransition);
-    padding: var(--NavBarButtonLinkPadding);
+    text-decoration: var(--NavBarButtonDecorations);
+    margin-left: var(--NavBarButtonMarginLeft);
+    border: var(--NavBarButtonBorder);
+    transition: var(--NavBarButtonTransition);
+    padding: var(--NavBarButtonPadding);
 }
 
-/* ----- Nav-Bar Button Href a Links Vége ----- */
+/* ----- Nav-Bar Buttons Vége ----- */
 
 
-/* ----- jellyFishLogo, Nav-Bar Button Href a Links:Hover ----- */
+/* ----- jellyFishLogo, Nav-Bar Buttons:Hover ----- */
 
 #jellyFishLogo:hover {
     box-shadow: var(--NavBarShortCutIconLinkHoverGlowingEffectBoxShadow);
@@ -166,40 +181,140 @@ html, body {
     border-radius: 10px;
 }
 
-#mainSiteNavBarButtonLink:hover {
-    border: var(--NavBarButtonLinkHoverBorder);
-    border-radius: var(--NavBarButtonLinkHoverBorderRadius);
-    text-shadow: var(--NavBarButtonLinkHoverGlowingEffectTextShadow);
+#mainSiteNavBarButton:hover {
+    border: var(--NavBarButtonHoverBorder);
+    border-radius: var(--NavBarButtonHoverBorderRadius);
+    text-shadow: var(--NavBarButtonHoverGlowingEffectTextShadow);
     font-size: var(--NavBarButtonsFontSize);
     color: var(--NavBarButtonsHoverColor);
-    background-color: var(--NavBarButtonLinkHoverBackgroundColor);
+    background-color: var(--NavBarButtonHoverBackgroundColor);
 }
 
-#livingWorldNavBarButtonLink:hover {
-    border: var(--NavBarButtonLinkHoverBorder);
-    border-radius: var(--NavBarButtonLinkHoverBorderRadius);
-    text-shadow: var(--NavBarButtonLinkHoverGlowingEffectTextShadow);
+#bodyStructureNavBarButton:hover {
+    border: var(--NavBarButtonHoverBorder);
+    border-radius: var(--NavBarButtonHoverBorderRadius);
+    text-shadow: var(--NavBarButtonHoverGlowingEffectTextShadow);
     font-size: var(--NavBarButtonsFontSize);
     color: var(--NavBarButtonsHoverColor);
-    background-color: var(--NavBarButtonLinkHoverBackgroundColor);
+    background-color: var(--NavBarButtonHoverBackgroundColor);
 }
 
-#nutritionNavBarButtonLink:hover {
-    border: var(--NavBarButtonLinkHoverBorder);
-    border-radius: var(--NavBarButtonLinkHoverBorderRadius);
-    text-shadow: var(--NavBarButtonLinkHoverGlowingEffectTextShadow);
+#nutritionNavBarButton:hover {
+    border: var(--NavBarButtonHoverBorder);
+    border-radius: var(--NavBarButtonHoverBorderRadius);
+    text-shadow: var(--NavBarButtonHoverGlowingEffectTextShadow);
     font-size: var(--NavBarButtonsFontSize);
     color: var(--NavBarButtonsHoverColor);
-    background-color: var(--NavBarButtonLinkHoverBackgroundColor);
+    background-color: var(--NavBarButtonHoverBackgroundColor);
 }
 
-#evolutionNavBarButtonLink:hover {
-    border: var(--NavBarButtonLinkHoverBorder);
-    border-radius: var(--NavBarButtonLinkHoverBorderRadius);
-    text-shadow: var(--NavBarButtonLinkHoverGlowingEffectTextShadow);
+#evolutionNavBarButton:hover {
+    border: var(--NavBarButtonHoverBorder);
+    border-radius: var(--NavBarButtonHoverBorderRadius);
+    text-shadow: var(--NavBarButtonHoverGlowingEffectTextShadow);
     font-size: var(--NavBarButtonsFontSize);
     color: var(--NavBarButtonsHoverColor);
-    background-color: var(--NavBarButtonLinkHoverBackgroundColor);
+    background-color: var(--NavBarButtonHoverBackgroundColor);
 }
 
-/* ----- jellyFishLogo, Nav-Bar Button Href a Links:Hover Vége ----- */
+/* ----- jellyFishLogo, Nav-Bar Buttons:Hover Vége ----- */
+
+
+/* ----- Content Címek (Title) ----- */
+
+#Content_Container {
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    top: 108%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--ContentContainerTextColor);
+    z-index: -1;
+}
+
+#titleOfBodyStructure {
+    background-color: var(--ContentContainerElementsBackgroundColor);
+    font-size: var(--ContentContainerTitleFontSize);
+    border-left: 2px solid var(--ContentContainerTitlesBorderColors);
+    border-top: 2px solid var(--ContentContainerTitlesBorderColors);
+    padding: 2%;
+}
+
+#titleOfNutrition {
+    background-color: var(--ContentContainerElementsBackgroundColor);
+    font-size: var(--ContentContainerTitleFontSize);
+    border-right: 2px solid var(--ContentContainerTitlesBorderColors);
+    border-top: 2px solid var(--ContentContainerTitlesBorderColors);
+    padding: 2%;
+    margin-top: 10%;
+}
+
+#titleOfEvolution {
+    background-color: var(--ContentContainerElementsBackgroundColor);
+    font-size: var(--ContentContainerTitleFontSize);
+    border-left: 2px solid var(--ContentContainerTitlesBorderColors);
+    border-top: 2px solid var(--ContentContainerTitlesBorderColors);
+    padding: 2%;
+    margin-top: 10%;
+}
+
+/* ----- Content Címek (Title) Vége ----- */
+
+
+/* ----- Content Paragrafus (Paragraph) ----- */
+
+#paragraphOfBodyStructure {
+    background-color: var(--contentElementsBackgroundColor);
+    font-size: var(--ContentContainerParagraphsFontSize);
+    margin-top: var(--ContentContainerParagraphsMarginTop);
+    padding: var(--ContentContainerParagraphsPadding);
+    text-align: right;
+    border-right: 2px solid var(--ContentContainerParagraphsBorderColors);
+    border-bottom: 2px solid var(--ContentContainerParagraphsBorderColors);
+}
+
+#paragraphOfNutrition {
+    background-color: var(--contentElementsBackgroundColor);
+    font-size: var(--ContentContainerParagraphsFontSize);
+    margin-top: var(--ContentContainerParagraphsMarginTop);
+    padding: var(--ContentContainerParagraphsPadding);
+    text-align: left;
+    border-left: 2px solid var(--ContentContainerParagraphsBorderColors);
+    border-bottom: 2px solid var(--ContentContainerParagraphsBorderColors);
+}
+
+#paragraphOfEvolution {
+    background-color: var(--contentElementsBackgroundColor);
+    font-size: var(--ContentContainerParagraphsFontSize);
+    margin-top: var(--ContentContainerParagraphsMarginTop);
+    padding: var(--ContentContainerParagraphsPadding);
+    text-align: right;
+    border-right: 2px solid var(--ContentContainerParagraphsBorderColors);
+    border-bottom: 2px solid var(--ContentContainerParagraphsBorderColors);
+    margin-bottom: 30%;
+}
+
+/* ----- Content Paragrafus (Paragraph) Vége ----- */
+
+
+/* ----- scrollbar (Görgősáv) ----- */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 217, 255);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 145, 170);
+}
+
+/* ----- scrollbar (Görgősáv) Vége ----- */
