@@ -21,3 +21,19 @@ function scrollToTheThirdTitle() {
 }
 
 // ----- Scroll Függvények Vége -----
+
+// ----- Background JellyFish Music Play / Pause Függvények -----
+
+var aud = document.getElementById("backgroundJellyFishMusicButton").children[0];
+var isPlaying = false;
+aud.pause();
+function playPause() {
+  if (isPlaying) {
+    aud.pause();
+  } else {
+    aud.play();
+  }
+  isPlaying = !isPlaying;
+}
+
+// ----- Background JellyFish Music Play / Pause Függvények Vége -----
